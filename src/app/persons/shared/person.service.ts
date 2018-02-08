@@ -9,13 +9,12 @@ import { Person } from './person.model';
 @Injectable()
 export class PersonService {
 
-  // selectedPerson : Person;
+  // person : Person;
    personList : Person[];
   
   constructor(private http : Http) { }
 
   getPersonList(){
-
     this.http.get('http://localhost:52188/WebApiSample/Person/GetAll')
     .map((data : Response) => {
       return data.json() as Person[];
