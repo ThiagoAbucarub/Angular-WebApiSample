@@ -1,0 +1,26 @@
+<table class="table table-sm table-hover">
+  <tr>
+      <td>Id</td>
+      <td>Name</td>
+      <td>Phone</td>
+      <td>Email</td>
+      <td>BornDate</td>
+      <td>Gender</td>
+  </tr>  
+  <tr *ngFor="let person of personService.personList">
+    <td>{{person.PersonId}}</td>
+    <td>{{person.Name}}</td>
+    <td>{{person.Phone}}</td>
+    <td>{{person.Email}}</td>
+    <td>{{person.BornDate}}</td>
+    <td>{{person.Gender}}</td>
+    <td>
+      <a class="btn" (click)="showForEdit(person)">
+        <i class="fa fa-pencil-square-o"></i>
+      </a>
+      <a class="btn text-danger" (click)="onDelete(person.PersonId)">
+        <i class="fa fa-trash-o"></i>
+      </a>
+    </td>
+  </tr>
+</table>
