@@ -4,19 +4,19 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { PersonsComponent } from './persons/persons.component';
-import { PersonComponent } from './persons/person/person.component';
-import { PersonListComponent } from './persons/person-list/person-list.component';
-import { PersonService } from './persons/shared/person.service';
+import { ContactsComponent } from './contacts/contacts.component';
+import { ContactService } from './contacts/shared/contact.service';
+import { ContactListComponent } from './contacts/contact-list/contact-list.component';
+import { ContactComponent } from './contacts/contact/contact.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PersonComponent,
-    PersonsComponent,
-    PersonListComponent
+    ContactComponent,
+    ContactsComponent,
+    ContactListComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +24,7 @@ import { PersonService } from './persons/shared/person.service';
     HttpModule
   ],
   providers: [
-    PersonService
+    ContactService
   ],
   bootstrap: [AppComponent]
 })

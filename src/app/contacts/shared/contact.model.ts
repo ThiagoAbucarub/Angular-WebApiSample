@@ -1,5 +1,5 @@
-export class Person {
-    PersonId: number;
+export class Contact {
+    UserId: number;
     Name: string;
     Phone: string;
     Email: string;

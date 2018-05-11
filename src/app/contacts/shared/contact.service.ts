@@ -4,22 +4,22 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
 
-import { Person } from './person.model';
+import { Contact } from './contact.model';
 
 @Injectable()
-export class PersonService {
+export class ContactService {
 
-  // person : Person;
-   personList : Person[];
+  // contact : Contact;
+   contactList : Contact[];
   
   constructor(private http : Http) { }
 
-  getPersonList(){
+  getContactList(){
     this.http.get('http://localhost:52188/WebApiSample/Person/GetAll')
     .map((data : Response) => {
-      return data.json() as Person[];
+      return data.json() as Contact[];
     }).toPromise().then( x => {
-      this.personList = x;
+      this.contactList = x;
     })
   }
 
